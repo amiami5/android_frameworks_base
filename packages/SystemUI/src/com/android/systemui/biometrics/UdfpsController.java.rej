@@ -1,0 +1,12 @@
+--- packages/SystemUI/src/com/android/systemui/biometrics/UdfpsController.java
++++ packages/SystemUI/src/com/android/systemui/biometrics/UdfpsController.java
+@@ -1328,6 +1381,9 @@ public class UdfpsController implements DozeReceiver, Dumpable {
+         unconfigureDisplay(view);
+         cancelAodSendFingerUpAction();
+ 
++        xaiomiTouchFeature(0);
++        xiaomiFingerprintExtension(0);
++
+         // Add a delay to ensure that the dim amount is updated after the display has had chance
+         // to switch out of HBM mode. The delay, in ms is stored in config_udfpsDimmingDisableDelay.
+         // If the delay is 0, the dim amount will be updated immediately.
